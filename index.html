@@ -1,6 +1,4 @@
-# Regenerate the index.html using the correct local image name (LL.jpg)
-
-html_fixed = """<!DOCTYPE html>
+html_clean = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -80,9 +78,9 @@ html_fixed = """<!DOCTYPE html>
 </html>
 """
 
-# Save it
-file_path_fixed = "/mnt/data/index.html"
-with open(file_path_fixed, "w") as f:
-    f.write(html_fixed)
+# Save it to a new HTML file
+file_path_clean = "/mnt/data/index.html"
+with open(file_path_clean, "w") as f:
+    f.write(html_clean)
 
-file_path_fixed
+file_path_clean
