@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Lotus Leaf</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .container {
+      position: relative;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    .lotus-img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .hotspot {
+      position: absolute;
+      top: 42%;
+      left: 32%;
+      width: 28px;
+      height: 28px;
+      background-color: #2a9d8f;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .hotspot:hover {
+      transform: scale(1.1);
+    }
+    .tooltip {
+      display: none;
+      position: absolute;
+      top: 52%;
+      left: 35%;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 12px;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="lotus-leaf.jpg" alt="Lotus Leaf" class="lotus-img">
+    <div class="hotspot" onclick="toggleTooltip()">+</div>
+    <div class="tooltip" id="tooltip">
+      💧 <strong>Water droplet on lotus leaf</strong><br>
+      This is an example of the <em>\"lotus effect\"</em>, where water beads up and rolls off due to the leaf's superhydrophobic surface.
+    </div>
+  </div>
+
+  <script>
+    function toggleTooltip() {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.style.display = tooltip.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
