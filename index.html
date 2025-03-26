@@ -1,4 +1,6 @@
-html_clean = """<!DOCTYPE html>
+# Save a clean version of the index.html with no extra text at the top
+
+html_clean_no_extra = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -78,9 +80,9 @@ html_clean = """<!DOCTYPE html>
 </html>
 """
 
-# Save it to a new HTML file
-file_path_clean = "/mnt/data/index.html"
-with open(file_path_clean, "w") as f:
-    f.write(html_clean)
+# Save the clean file
+file_path_clean_final = "/mnt/data/index.html"
+with open(file_path_clean_final, "w") as f:
+    f.write(html_clean_no_extra)
 
-file_path_clean
+file_path_clean_final
